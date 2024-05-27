@@ -26,7 +26,14 @@ List of Gender
                         <td>{{ gender.gender_id }}</td>
                         <td>{{ gender.gender }}</td>
                         <td>{{ gender.date_created }}</td>
-                        <td>{{ gender.date_updated }}</td>
+                        <td>{{ gender.date_update }}</td>
+                        <td>
+                            <div class="btn-group">
+                                <a href="/gender/show/{{ gender.gender_id}}" class="btn btn-primary">View</a>
+                                <a href="/gender/edit/{{ gender.gender_id }}" class="btn btn-success">Edit</a>
+                                <a href="/gender/delete/{{ gender.gender_id }}" class="btn btn-danger">Delete</a>
+                            </div>
+                        </td>
                     </tr>
                 {% endfor %}
             </tbody>

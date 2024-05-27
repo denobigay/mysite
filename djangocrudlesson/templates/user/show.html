@@ -1,0 +1,42 @@
+
+{% extends "layout/base.html" %}
+
+{% block title %}
+View User
+{% endblock title %}
+
+{% block content %}
+<div class="col-md-5 mx-auto mt-3">
+    <form action="#" method="post"> 
+        <div class="mb-3">
+            <label for="user">User</label>
+            <input type="text" class="form-control" id="user" name="user" value="{{ user.username }}" readonly />
+        </div>
+        <div class="mb-3">
+            <label for="first_name">First Name</label>
+            <input type="text" class="form-control" id="first_name" name="first_name" value="{{ user.first_name }}" readonly />
+        </div>
+        <div class="mb-3">
+            <label for="middle_name">Middle Name</label>
+            <input type="text" class="form-control" id="middle_name" name="middle_name" value="{{ user.middle_name }}" readonly />
+        </div>
+        <div class="mb-3">
+            <label for="last_name">Last Name</label>
+            <input type="text" class="form-control" id="last_name" name="last_name" value="{{ user.last_name }}" readonly />
+        </div>
+        <div class="mb-3">
+            <label for="age">Age</label>
+            <input type="text" class="form-control" id="age" name="age" value="{{ user.age }}" readonly />
+        </div>
+        <div class="mb-3">
+            <label for="birth_date">Birth Date</label>
+            <input type="text" class="form-control" id="birth_date" name="birth_date" value="{{ user.birth_date }}" readonly />
+        </div>
+        <div class="mb-3">
+            <label for="gender">Gender</label>
+            <input type="text" class="form-control" id="gender" name="gender" value="{{ user.gender.gender }}" readonly />
+        </div>
+        <a href="/users" class="btn btn-secondary float-end col-12 col-md-3 me-1">Back</a>
+    </form>
+</div>
+{% endblock content %}
